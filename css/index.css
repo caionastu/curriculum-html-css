@@ -1,15 +1,22 @@
+:root {
+    font-size: 16px;
+    --header-bg-color: #fbcaca;
+    --formation-bg-color: #e2e2fd;
+    --perfil-img-border-color: white;
+}
+
 body {
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Open Sans', sans-serif;
 }
 
 header {
     height: calc(100vh);
 }
 
+/*
 nav {
     padding-top: 1.5em;
     height: 15%;
-    /*box-sizing: border-box;*/
     background-color: #fbcaca;
 }
 
@@ -35,37 +42,56 @@ nav a {
 nav a:visited {
     color: black;
 }
+*/
 
 .perfil {
-    background: linear-gradient(#fbcaca, #e2e2fd);
+    background: linear-gradient(var(--header-bg-color) 80%, var(--formation-bg-color));
     box-sizing: border-box;
     text-align: center;
-    padding-top: 1em;
-    
+    padding-top: 1rem;
+
 }
 
 .perfil h1 {
-    margin-bottom: 1em;
+    margin: 2rem auto;
 }
 
 .perfil img {
     width: 50%;
     height: 50%;
     border-radius: 50%;
-    border: 5px solid white;
+    border: 5px solid var(--perfil-img-border-color);
 }
 
 .perfil p {
-    line-height: 2em;
-    font-size: 2em;
-    margin-bottom: 1em;
+    line-height: 3rem;
+    font-size: 2rem;
+    margin-bottom: 1rem;
 }
 
 .perfil h2 {
-    position: relative;
-    text-align: right;
-    margin-right: .5em;
-    top: 1.75em;
+    margin-top: 1.5rem;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    font-style: italic;
+}
 
-    font-size: 1.25em;
+.perfil h3 {
+    position: relative;
+    top: 3rem;
+    margin-right: .5rem;
+    
+    text-align: right;
+    font-size: 1.25rem;
+    font-family: 'Indie Flower', cursive;
+    font-style: italic;
+}
+
+.formation {
+    background-color: var(--formation-bg-color);
+    text-align: center;
+}
+
+.formation h2 {
+    margin:  0 auto;
 }
