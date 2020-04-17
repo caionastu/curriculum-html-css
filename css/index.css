@@ -1,12 +1,15 @@
 :root {
     font-size: 16px;
-    --header-bg-color: #fbcaca;
-    --formation-bg-color: #e2e2fd;
+    --header-bg-color: #fefefe;
+    --formation-bg-color: white;
     --perfil-img-border-color: white;
+    --font-family-indie: 'Indie Flower', sans-serif, Helvetica;
+    --font-family-text: 'Open Sans', sans-serif;
+    /*EC91D8*/
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: var(--font-family-text);
 }
 
 header {
@@ -45,7 +48,7 @@ nav a:visited {
 */
 
 .perfil {
-    background: linear-gradient(var(--header-bg-color) 80%, var(--formation-bg-color));
+    background: linear-gradient(var(--header-bg-color) 85%, var(--formation-bg-color));
     box-sizing: border-box;
     text-align: center;
     padding-top: 1rem;
@@ -83,15 +86,52 @@ nav a:visited {
     
     text-align: right;
     font-size: 1.25rem;
-    font-family: 'Indie Flower', cursive;
+    font-family: var(--font-family-indie);
     font-style: italic;
 }
 
-.formation {
+section {
+    padding: 2rem;
     background-color: var(--formation-bg-color);
-    text-align: center;
 }
 
-.formation h2 {
-    margin:  0 auto;
+section h2 {
+    text-align: center;
+    font-family: var(--font-family-indie);
+    font-size: 2rem;
+    font-weight: lighter;
+}
+
+.formation li {
+    margin: 1rem 0;
+}
+
+.formation img {
+    display: block;
+    margin: 0 auto;
+    width: 80%;
+    height: 150px;
+}
+
+.skill-bar {
+    width: 80%;
+    height: 1rem;
+    margin: 0 auto;
+    box-sizing: border-box;
+    background: rgb(0, 0, 0, 0.075) !important;
+    border-radius: 60px;
+}
+
+.skill-bar p {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: white;
+}
+
+.skill-bar-value {
+    width: 80%;
+    height: 100%;
+    background: #75b800 !important;
+    border-radius: 10px;
 }
