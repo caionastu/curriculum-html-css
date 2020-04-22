@@ -13,7 +13,7 @@ body {
 }
 
 header {
-    height: calc(100vh);
+
 }
 
 /*
@@ -98,8 +98,12 @@ section {
 section h2 {
     text-align: center;
     font-family: var(--font-family-indie);
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: lighter;
+}
+
+.introduction {
+    margin-top: 1rem;
 }
 
 .formation li {
@@ -113,12 +117,34 @@ section h2 {
     height: 150px;
 }
 
+.skills ul {
+    margin-top: 2rem;
+}
+
+.skills li {
+    margin-bottom: 2rem;
+}
+
+.skills li:last-child {
+    margin-bottom: 1rem;
+}
+
+.skills h3 {
+    display: inline;
+    font-size: 1.5rem;
+}
+
+.skills h4 {
+    float: right;
+    font-size: 1.5rem;
+}
+
 .skill-bar {
-    width: 80%;
+    margin-top: .5rem;
+    width: 100%;
     height: 1rem;
-    margin: 0 auto;
     box-sizing: border-box;
-    background: rgb(0, 0, 0, 0.075) !important;
+    background: rgb(0, 0, 0, 0.075);
     border-radius: 60px;
 }
 
@@ -126,12 +152,10 @@ section h2 {
     position: absolute;
     left: 50%;
     transform: translate(-50%, 0);
-    color: white;
 }
 
-.skill-bar-value {
-    width: 80%;
+.skill-bar div {
     height: 100%;
-    background: #75b800 !important;
+    background: #75b800 ;
     border-radius: 10px;
 }
