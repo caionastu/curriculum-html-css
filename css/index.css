@@ -1,16 +1,35 @@
 :root {
     font-size: 16px;
+    --font-family-indie: 'Indie Flower', sans-serif, Helvetica;
+    --font-family-text: 'Open Sans', sans-serif;
+
     --header-bg-color: #fefefe;
     --formation-bg-color: white;
     --perfil-img-border-color: white;
-    --font-family-indie: 'Indie Flower', sans-serif, Helvetica;
-    --font-family-text: 'Open Sans', sans-serif;
+
+    
     /*EC91D8*/
 }
 
 body {
     font-family: var(--font-family-text);
 }
+
+section {
+    padding: 2rem;
+    background-color: var(--formation-bg-color);
+}
+
+section h2 {
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-family: var(--font-family-indie);
+    font-size: 3rem;
+    font-weight: lighter;
+}
+
+
+/**** Header Section ****/
 
 /*
 nav {
@@ -44,11 +63,17 @@ nav a:visited {
 */
 
 .perfil {
-    background: linear-gradient(var(--header-bg-color) 85%, var(--formation-bg-color));
-    box-sizing: border-box;
+    padding-top: 4rem;
+    padding-bottom: 1rem;
     text-align: center;
-    padding-top: 1rem;
+    box-sizing: border-box;
 
+    background-image: url("../assets/perfil-background.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-color: black;
+
+    color: white;
 }
 
 .perfil h1 {
@@ -85,32 +110,59 @@ nav a:visited {
     font-style: italic;
 }
 
-section {
-    padding: 2rem;
-    background-color: var(--formation-bg-color);
-}
-
-section h2 {
-    text-align: center;
-    font-family: var(--font-family-indie);
-    font-size: 3rem;
-    font-weight: lighter;
-}
+/**** Introduction Section ****/
 
 .introduction {
     margin-top: 1rem;
 }
 
-.formation li {
-    margin: 1rem 0;
+/**** Formation Section ****/
+
+.formation h3 {
+    font-size: 1.6rem;
+}
+
+.formation h4, p {
+    font-size: 1.3rem;
+}
+
+.formation img, .formation h3, .formation h4 {
+    margin: 1.5rem 0;
 }
 
 .formation img {
     display: block;
     margin: 0 auto;
-    width: 80%;
+    width: 100%;
     height: 150px;
 }
+
+.formation li:first-child {
+    margin-bottom: 3rem;
+}
+
+/**** Experiences Section ****/
+
+.experiences h3 {
+    margin-bottom: 1rem;
+    font-size: 2rem;
+}
+
+.experiences h4 {
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.experiences h5 {
+    margin-bottom: 1rem;
+    font-size: 1.25rem;
+}
+
+.experiences hr {
+    margin: 2rem 0;
+}
+
+/**** Skills Section ****/
 
 .skills ul {
     margin-top: 2rem;
@@ -154,27 +206,80 @@ section h2 {
     border-radius: 10px;
 }
 
-
+/**** Contact Section ****/
 form {
     margin: 1rem 0;
+    
 }
 
-form label {
-	font-size: 1.2rem;
-}
-
-form input, textarea, button, label {
+form input, textarea, label, button {
     display: block;
+    font-family: var(--font-family-text);
+}
+
+form input, textarea, label {
     box-sizing: border-box;
     margin: 1rem 0;
     width: 100%;
 }
 
-form input, textarea {
+form input, textarea, button {
     border: 1px solid #bdbdbd;
+    font-size: 1.2rem;
+}
+
+form label {
+	font-size: 1.75rem;
+}
+
+form input {
+    height: 2.5rem;
+    padding: 0.5rem;
 }
 
 .contact textarea {
     resize: none;
     height: 10rem;
+}
+
+form button {
+    display: block;
+    margin: 2.5rem auto 0 auto;
+    width: 80%;
+    height: 2.5rem;
+    border-radius: 10px;
+
+    font-family: var(--font-family-text);
+
+    background-color: black;
+    color: white;
+
+    transition: all 0.5s ease;
+}
+
+/**** Contact Section ****/
+
+footer {
+    padding: 1rem;
+    height: 225px;
+    text-align: center;
+    
+    box-sizing: border-box;   
+
+    color: white;
+    background-color: rgba(0, 0, 0, 0.800);
+    background-image: url(../assets/footer-background.png);
+    background-size: cover;
+}
+
+footer h2 {
+    margin-top: 1rem;
+    font-size: 1.5rem;
+    font-family: var(--font-family-indie);
+}
+
+footer i {
+    margin-top: 1.5rem;
+    font-size: 4.5rem;
+    color: white;
 }
