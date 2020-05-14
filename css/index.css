@@ -3,12 +3,10 @@
     --font-family-indie: 'Indie Flower', sans-serif, Helvetica;
     --font-family-text: 'Open Sans', sans-serif;
 
-    --header-bg-color: #fefefe;
-    --formation-bg-color: white;
-    --perfil-img-border-color: white;
-
-    
-    /*EC91D8*/
+    --dark-color: black;
+    --light-color: #fefefe;
+    --uncompleted-skill-bar-color: rgb(0, 0, 0, 0.075);
+    --form-border-color: #bdbdbd;
 }
 
 body {
@@ -29,38 +27,7 @@ section h2 {
 }
 
 
-/**** Header Section ****/
-
-/*
-nav {
-    padding-top: 1.5em;
-    height: 15%;
-    background-color: #fbcaca;
-}
-
-nav ul {
-    text-align: center;
-    margin: 0 auto;
-}
-
-nav li {
-    display: inline-block;
-    padding: .2em .5em;
-    margin-right: 0.5em;
-
-    border: 1px solid black;
-    border-radius: 5px;
-}
-
-nav a {
-    text-decoration: none;
-    font-size: 1.25em;
-}
-
-nav a:visited {
-    color: black;
-}
-*/
+/**** Perfil Section ****/
 
 .perfil {
     padding-top: 4rem;
@@ -70,10 +37,15 @@ nav a:visited {
 
     background-image: url("../assets/perfil-background.png");
     background-size: contain;
-    background-repeat: no-repeat;
-    background-color: black;
+    background-repeat: repeat-x;
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
 
-    color: white;
+.perfil div {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 30rem;
 }
 
 .perfil h1 {
@@ -82,9 +54,10 @@ nav a:visited {
 
 .perfil img {
     width: 50%;
+    max-width: 15rem;
     height: 50%;
     border-radius: 50%;
-    border: 5px solid var(--perfil-img-border-color);
+    border: 5px solid var(--light-color);
 }
 
 .perfil p {
@@ -110,13 +83,11 @@ nav a:visited {
     font-style: italic;
 }
 
-/**** Introduction Section ****/
-
-.introduction {
-    margin-top: 1rem;
-}
-
 /**** Formation Section ****/
+
+.formation li {
+    text-align: center;
+}
 
 .formation h3 {
     font-size: 1.6rem;
@@ -133,8 +104,8 @@ nav a:visited {
 .formation img {
     display: block;
     margin: 0 auto;
-    width: 100%;
-    height: 150px;
+    width: 12rem;
+    height: 10rem;
 }
 
 .formation li:first-child {
@@ -142,6 +113,16 @@ nav a:visited {
 }
 
 /**** Experiences Section ****/
+
+.experiences {
+    background-color: var(--dark-color);
+    color: var(--light-color);
+}
+
+.experiences ul {
+    margin: 0 auto;
+    max-width: 30rem;
+}
 
 .experiences h3 {
     margin-bottom: 1rem;
@@ -165,7 +146,8 @@ nav a:visited {
 /**** Skills Section ****/
 
 .skills ul {
-    margin-top: 2rem;
+    margin: 2rem auto 0;
+    max-width: 30rem;
 }
 
 .skills li {
@@ -191,7 +173,7 @@ nav a:visited {
     width: 100%;
     height: .75rem;
     box-sizing: border-box;
-    background: rgb(0, 0, 0, 0.075);
+    background: var(--uncompleted-skill-bar-color);
     border-radius: 60px;
 }
 
@@ -208,8 +190,8 @@ nav a:visited {
 
 /**** Contact Section ****/
 form {
-    margin: 1rem 0;
-    
+    margin: 1rem auto;
+    max-width: 30rem;
 }
 
 form input, textarea, label, button {
@@ -224,7 +206,7 @@ form input, textarea, label {
 }
 
 form input, textarea, button {
-    border: 1px solid #bdbdbd;
+    border: 1px solid var(--form-border-color);
     font-size: 1.2rem;
 }
 
@@ -251,8 +233,8 @@ form button {
 
     font-family: var(--font-family-text);
 
-    background-color: black;
-    color: white;
+    background-color: var(--dark-color);
+    color: var(--light-color);
 
     transition: all 0.5s ease;
 }
@@ -266,10 +248,10 @@ footer {
     
     box-sizing: border-box;   
 
-    color: white;
-    background-color: rgba(0, 0, 0, 0.800);
+    color: var(--light-color);
+    background-color: var(--dark-color);
     background-image: url(../assets/footer-background.png);
-    background-size: cover;
+    background-size: 25rem, auto, contain;
 }
 
 footer h2 {
@@ -281,5 +263,19 @@ footer h2 {
 footer i {
     margin-top: 1.5rem;
     font-size: 4.5rem;
-    color: white;
+    color: var(--light-color);
+}
+
+@media (min-width: 500px) {
+    .perfil {
+        background-size: 50rem, auto, contain;
+    }
+
+    .perfil h1 {
+        margin: 4rem auto;
+    }
+
+    .footer {
+        background-size: auto, 2rem, contain;
+    }
 }
